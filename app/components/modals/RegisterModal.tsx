@@ -14,6 +14,7 @@ import useRegisterModal from '@/app/hooks/useRegisterModal';
 import Modal from './Modal';
 import Heading from '../Heading';
 import Input from '../inputs/input';
+import Button from '../Button';
 // import Input from '@/app/components/inputs/input'
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -81,6 +82,24 @@ const bodyContent =(
   </div>
 )
 
+const footerContent = (
+  <div className='flex flex-col gap-4 mt-3' >
+    <hr/>
+    <Button
+    outline
+    label="Continue with google"
+    icon={FcGoogle}
+    onClick={() => {}}
+    />
+    <Button
+    outline
+    label="Continue with Github"
+    icon={AiFillGithub}
+    onClick={() => {}}
+    />
+  </div>
+)
+
   return (
     <Modal 
     disabled={isLoading}
@@ -90,6 +109,7 @@ const bodyContent =(
     onClose={registerModal.onClose}
     onSubmit={handleSubmit(onSubmit)}
     body={bodyContent}
+    footer={footerContent}
     />
   )
 };
