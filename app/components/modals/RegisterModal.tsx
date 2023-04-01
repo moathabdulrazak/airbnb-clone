@@ -13,7 +13,7 @@ import useRegisterModal from '@/app/hooks/useRegisterModal';
 import Modal from './Modal';
 import Heading from '../Heading';
 import Input from '../inputs/input';
-
+// import Input from '@/app/components/inputs/input'
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
   const [isLoading, setIsLoading] = useState(false);
@@ -40,7 +40,6 @@ const onSubmit: SubmitHandler<FieldValues> = (data) => {
   })
   .catch((error) => {
     console.log(error);
-    
   })
   .finally(() => {
     setIsLoading(false);
@@ -53,7 +52,31 @@ const bodyContent =(
     title='Welcome to Airbnb'
     subtile='Create an account!'
     />
-    <Input/>
+        <Input
+    id='name'
+    label='Name'
+    disabled={isLoading}
+    register={register}
+    errors={errors}
+    required
+    />
+    <Input
+    id='email'
+    label='Email'
+    disabled={isLoading}
+    register={register}
+    errors={errors}
+    required
+    />
+    <Input
+    id='password'
+    type='password'
+    label='Password'
+    disabled={isLoading}
+    register={register}
+    errors={errors}
+    required
+    />
   </div>
 )
 
