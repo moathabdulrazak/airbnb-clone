@@ -3,6 +3,7 @@ import React, { useCallback, useState } from 'react';
 import axios from 'axios';
 import { AiFillGithub } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
+import {toast} from 'react-hot-toast'
 import {
   FieldValues,
   SubmitHandler,
@@ -39,7 +40,7 @@ const onSubmit: SubmitHandler<FieldValues> = (data) => {
     registerModal.onClose();
   })
   .catch((error) => {
-    console.log(error);
+    toast.error('something went wrong')
   })
   .finally(() => {
     setIsLoading(false);
