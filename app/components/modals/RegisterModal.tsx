@@ -48,7 +48,10 @@ const onSubmit: SubmitHandler<FieldValues> = (data) => {
 
 const bodyContent =(
   <div className='flex flex-col gap-4 ' >
-    <Heading/>
+    <Heading
+    title='Welcome to Airbnb'
+    subtile='Create an account!'
+    />
   </div>
 )
 
