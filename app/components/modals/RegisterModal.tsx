@@ -11,6 +11,7 @@ import {
 
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import Modal from './Modal';
+import Heading from '../Heading';
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -45,6 +46,12 @@ const onSubmit: SubmitHandler<FieldValues> = (data) => {
   })
 }
 
+const bodyContent =(
+  <div className='flex flex-col gap-4 ' >
+    <Heading/>
+  </div>
+)
+
   return (
     <Modal 
     disabled={isLoading}
@@ -53,6 +60,7 @@ const onSubmit: SubmitHandler<FieldValues> = (data) => {
     actionLabel="Continue"
     onClose={registerModal.onClose}
     onSubmit={handleSubmit(onSubmit)}
+    body={bodyContent}
     />
   )
 };
