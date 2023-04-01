@@ -2,6 +2,10 @@ import React from 'react'
 import Container from '../Container'
 import Logo from '../navbar/Logo'
 import { Search } from './Search'
+import { UserMenu } from './UserMenu'
+
+
+
 export const Navbar = () => {
   return (
     <div className='fixed w-full bg-white z-10 shadow-sm'>
@@ -11,6 +15,7 @@ export const Navbar = () => {
             
             <Logo/>
             <Search/>
+            <UserMenu/>
             </div>
           </Container>
         </div>
