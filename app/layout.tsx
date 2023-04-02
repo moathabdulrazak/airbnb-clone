@@ -4,6 +4,7 @@ import { Navbar } from './components/navbar/Navbar'
 import './globals.css'
 import {Nunito} from "next/font/google"
 import ToasterProvider from './providers/ToasterProvider'
+import LoginModal from './components/modals/LoginModal'
 
 
 export const metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
         <ClientOnly>
           <ToasterProvider/>
         <Navbar/>
+        <LoginModal/>
         <RegisterModal/>
         </ClientOnly>
         {children}</body>
