@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import Modal from './Modal'
 import useRentModal from '@/app/hooks/useRentModal'
 
@@ -16,8 +16,33 @@ enum STEPS {
 const RentModal = () => {
   const rentModal = useRentModal();
 
-  const [StereoPannerNode, setStep] = useState(STEPS.CATEGORY)
+  const [step, setStep] = useState(STEPS.CATEGORY);
 
+  const onBack = () => {
+    setStep((value) => value - 1);
+  };
+
+  const onNext = () => {
+    setStep((value) => value + 1);
+  };
+
+  const actionLabel = useMemo(() => {
+    if(step === STEPS.PRICE){
+      return 'Create';
+    }
+
+    return 'Next';
+  }, [step]);
+
+  const secondaryActionLabel = useMemo(() => {
+    if(step === STEPS.CATEGORY){
+      return undefined;
+    }
+  
+    return 'Back';
+  }, [step]);
+
+  
   return (
     <Modal
     isOpen={rentModal.isOpen}
