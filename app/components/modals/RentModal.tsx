@@ -118,7 +118,7 @@ overflow-y-auto
         subtile='Help guests find you'
         />
         <CountrySelect
-        
+        onChange={(value) => setCustomValue('location', value)}
         />
       </div>
     )
