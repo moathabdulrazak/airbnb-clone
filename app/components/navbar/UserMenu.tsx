@@ -8,6 +8,7 @@ import LoginModal from '../modals/LoginModal'
 import useLoginModal from '@/app/hooks/useLoginModal'
 import { signOut } from 'next-auth/react'
 import { SafeUser } from '@/app/types'
+import useRentModal from '@/app/hooks/useRentModal'
 
 interface UserMenuProps{
 currentUser?: SafeUser | null
@@ -18,6 +19,7 @@ export const UserMenu: React.FC<UserMenuProps> = ({
 }) => {
   const registerModal = useRegisterModal();
   const loginModal = useLoginModal();
+  const rentModal = useRentModal();
   const[isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = useCallback (() => {
@@ -28,8 +30,8 @@ export const UserMenu: React.FC<UserMenuProps> = ({
 if(!currentUser){
  return  loginModal.onOpen();
 }
-
-  }, [currentUser, loginModal])
+  rentModal.onOpen();
+  }, [currentUser, loginModal, rentModal])
 
   
   return (
