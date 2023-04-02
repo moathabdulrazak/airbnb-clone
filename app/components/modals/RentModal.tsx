@@ -93,7 +93,7 @@ grid-cols-1
 md:grid-cols-2
 gap-3
 max-h-[50vh]
-overflow-y-a
+overflow-y-auto
 ' >
   {categories.map((item) => (
     <div key={item.label} className='col-span-1' >
@@ -111,8 +111,11 @@ overflow-y-a
 
   if(step === STEPS.LOCATION){
     bodyContent = (
-      <div>
-        Location Step!
+      <div className='flex flex-col gap-8' >
+        <Heading 
+        title='Where is your place located?'
+        subtile='Help guests find you'
+        />
       </div>
     )
   }
