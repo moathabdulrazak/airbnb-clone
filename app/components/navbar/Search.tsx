@@ -30,7 +30,7 @@ export const Search = () => {
       font-semibold
       px-6
       '>
-        anywhere
+        Anywhere
       </div>
         <div
         className='
@@ -44,7 +44,7 @@ export const Search = () => {
         text-center
         '
         >
-            any week
+            Any week
         </div>
         <div className='
         text-sm
