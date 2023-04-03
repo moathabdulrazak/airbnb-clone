@@ -6,9 +6,8 @@ import EmptyState from "./components/EmptyState";
 
 
 export default async function Home() {
-  const isEmpty = true;
   const listings = await getListings()
-  if(isEmpty){
+  if(listings.length === 0){
     return(
       <ClientOnly>
         <EmptyState showReset />
@@ -30,7 +29,11 @@ export default async function Home() {
         2xl:grid-cols-6
         gap-8
         "  >
-          <div className="text-rose-500" >My future listing</div>
+          {listings.map((listing: any) => {
+            return (
+              <div>{listing.title}</div>
+            )
+          })}
         </div>
       </Container>
     </ClientOnly>
