@@ -216,6 +216,14 @@ overflow-y-auto
     )
   }
 
+  if(step === STEPS.PRICE){
+    bodyContent = (
+      <div className='flex flex-col gap-8' >
+
+      </div>
+    )
+  }
+
   return (
     <Modal
     isOpen={rentModal.isOpen}
