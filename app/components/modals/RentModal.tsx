@@ -135,6 +135,18 @@ overflow-y-auto
     )
   }
 
+  if(step === STEPS.INFO){
+    bodyContent = (
+      <div className='flex flex-col gap-8'  >
+        <Heading
+        title='Share some basics about your place'
+        subtile='What amenities do you have?'
+        />
+      </div>
+    )
+
+  }
+
   return (
     <Modal
     isOpen={rentModal.isOpen}
