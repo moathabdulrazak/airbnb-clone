@@ -7,6 +7,8 @@ import Avatar from '../Avatar';
 import ListingCategory from './ListingCategory';
 
 
+const 
+
 interface ListingInfoProps {
   user: SafeUser,
   description: string;
@@ -64,6 +66,12 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
         description={category.description}
         />
       )}
+      <hr />
+      <div className='text-lg font-light text-neutral-500' >
+        {description}
+      </div>
+      <hr />
+
     </div>
   )
 }
