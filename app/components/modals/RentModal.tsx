@@ -50,7 +50,9 @@ const RentModal = () => {
 
   const category = watch('category')
   const location = watch('location')
-
+  const guestCount = watch('guestCount')
+  const roomCount = watch('roomCount')
+  const bathroomCount = watch('bathroomCount')
 
   const Map = useMemo(() => dynamic(() => import('../Map'), {
     ssr: false
@@ -143,7 +145,26 @@ overflow-y-auto
         title='Share some basics about your place'
         subtile='What amenities do you have?'
         />
-        <Counter/>
+        <Counter
+        title='Guests'
+        subtile='How many guests do you allow?'
+        value={guestCount}
+        onChange={(value) => setCustomValue('guestCount', value)}
+        />
+        <hr />
+        <Counter
+        title='Rooms'
+        subtile='How many rooms do you have?'
+        value={roomCount}
+        onChange={(value) => setCustomValue('roomCount', value)}
+        />
+        <hr />
+        <Counter
+        title='Bathrooms'
+        subtile='How many bathrooms do you have?'
+        value={bathroomCount}
+        onChange={(value) => setCustomValue('bathroomCount', value)}
+        />
       </div>
     )
 
