@@ -2,6 +2,7 @@
 
 
 import React from 'react'
+import {Range} from 'react-date-range'
 
 interface ListingReservationProps{
   price: number
@@ -11,7 +12,7 @@ interface ListingReservationProps{
   onSubmit: () => void
   disabled?: boolean
   disabledDates: Date[]
-  
+
 }
 
 const ListingReservation = () => {
