@@ -175,7 +175,7 @@ const SearchModal = () => {
           }}
           value={bathroomCount}
           title="Bathrooms"
-          subtile="How many bathrooms do you need?"
+          subtile="How many bahtrooms do you need?"
         />
       </div>
     )
