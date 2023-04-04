@@ -73,6 +73,12 @@ const [dateRange, setDateRange] = useState(initialDateRange)
     })
     .then(() => {
       toast.success('Listing reserved!')
+      setDateRange(initialDateRange)
+      // redirect to /trips
+      router.refresh();
+    })
+    .catch(() => {
+      toast.error('Something went wrong!')
     })
   }, [])
 
