@@ -80,7 +80,17 @@ const [dateRange, setDateRange] = useState(initialDateRange)
     .catch(() => {
       toast.error('Something went wrong!')
     })
-  }, [])
+    .finally(() => {
+      setIsLoading(false);
+    })
+  }, [
+totalPrice,
+dateRange,
+listing?.id,
+router,
+currentUser,
+loginModal
+  ])
 
   const category = useMemo(() => {
     return categories.find((item) => item.label === listing.category )
