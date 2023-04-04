@@ -1,6 +1,6 @@
 # Full Stack Airbnb Clone with Next.js 13
 
-[LIVE PREVIEW](https://airbnb-clone-bice-zeta.vercel.app/)
+[Live preview](https://airbnb-clone-bice-zeta.vercel.app/)
 
 Features:
 
@@ -25,10 +25,6 @@ Features:
   - For example we will filter out properties that have a reservation in your desired date range to travel
 - Favorites system
 - Shareable URL filters
-
-```shell
-git clone https://github.com/AntonioErdeljac/next13-airbnb-clone.git
-```
 
 ### Install packages
 
