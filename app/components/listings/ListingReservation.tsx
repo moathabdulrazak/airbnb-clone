@@ -15,7 +15,15 @@ interface ListingReservationProps{
 
 }
 
-const ListingReservation = () => {
+const ListingReservation: React.FC<ListingReservationProps> = ({
+  price,
+  dateRange,
+  totalPrice,
+  onChangeDate,
+  onSubmit,
+  disabled,
+  disabledDates
+}) => {
   return (
     <div>ListingReservation</div>
   )
