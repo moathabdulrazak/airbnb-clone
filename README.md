@@ -1,6 +1,6 @@
 # Full Stack Airbnb Clone with Next.js 13
 
-[Live preview](https://airbnb-clone-bice-zeta.vercel.app/)
+[Live preview](https://irent.vercel.app/)
 
 Features:
 
