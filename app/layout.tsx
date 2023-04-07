@@ -2,7 +2,7 @@ import ClientOnly from './components/ClientOnly'
 import RegisterModal from './components/modals/RegisterModal'
 import { Navbar } from './components/navbar/Navbar'
 import './globals.css'
-import {Nunito} from "next/font/google"
+import { Nunito } from "next/font/google"
 import ToasterProvider from './providers/ToasterProvider'
 import LoginModal from './components/modals/LoginModal'
 import getCurrentUser from './actions/getCurrentUser'
@@ -29,17 +29,17 @@ export default async function RootLayout({
     <html lang="en">
       <body  >
         <ClientOnly>
-          <ToasterProvider/>
-        <Navbar currentUser={currentUser} />
-        <SearchModal/>
-        <RentModal/>
-        <LoginModal/>
-        <RegisterModal/>
+          <ToasterProvider />
+          <Navbar currentUser={currentUser} />
+          <SearchModal />
+          <RentModal />
+          <LoginModal />
+          <RegisterModal />
         </ClientOnly>
         <div className='pb-20 pt-28' >
-        {children}
+          {children}
         </div>
-        </body>
+      </body>
     </html>
   )
 }
