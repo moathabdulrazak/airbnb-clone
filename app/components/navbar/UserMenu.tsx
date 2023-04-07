@@ -130,10 +130,6 @@ if(!currentUser){
           onClick={loginModal.onOpen}
           label='Login'
           />
-          <MenuItem
-          onClick={registerModal.onOpen}
-          label='Sign up'
-          />
           </>
           )}
           </div>

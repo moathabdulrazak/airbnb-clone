@@ -73,23 +73,7 @@ const LoginModal = () => {
         title="Welcome back"
         subtile="Login to your account!"
       />
-      <Input
-        id="email"
-        label="Email"
-        disabled={isLoading}
-        register={register}  
-        errors={errors}
-        required
-      />
-      <Input
-        id="password"
-        label="Password"
-        type="password"
-        disabled={isLoading}
-        register={register}
-        errors={errors}
-        required
-      />
+
     </div>
   )
 
@@ -102,32 +86,18 @@ const LoginModal = () => {
         icon={FcGoogle}
         onClick={() => signIn('google')}
       />
-      <div className="
-      text-neutral-500 text-center mt-4 font-light">
-        <p>First time using Airbnb?
-          <span 
-            onClick={onToggle} 
-            className="
-              text-neutral-800
-              cursor-pointer 
-              hover:underline
-            "
-            > Create an account</span>
-        </p>
-      </div>
     </div>
   )
 
   return (
     <Modal
+    actionLabel="this website is only for demo purposes"
       disabled={isLoading}
       isOpen={loginModal.isOpen}
       title="Login"
-      actionLabel="Continue"
       onClose={loginModal.onClose}
       onSubmit={handleSubmit(onSubmit)}
-      body={bodyContent}
-      footer={footerContent}
+      body={footerContent}
     />
   );
 }
